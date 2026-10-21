@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab5Web - Praktikum JavaScript Dasar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Praktikum JavaScript Dasar</h1>
+    <p>Lab5Web — Latihan 1–8, Mini Project, dan Eksperimen Mandiri</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Latihan 1 — Menampilkan Output</h2>
+      <p id="pesan">Teks awal. Tekan tombol untuk menampilkan Hello World.</p>
+      <button type="button" id="btnHello">Tampilkan Hello World</button>
+      <p class="hint">Buka Console browser dengan menekan F12 → Console untuk melihat output console.log().</p>
+    </section>
+
+    <section class="panel">
+      <h2>Latihan 2 — Alert dan Prompt</h2>
+      <p>Meminta nama pengguna melalui prompt, lalu menampilkan sapaan.</p>
+      <button type="button" id="btnNama">Masukkan Nama</button>
+    </section>
+
+    <section class="panel">
+      <h2>Latihan 3 — Function dan Operasi Aritmetika</h2>
+      <div class="form-grid">
+        <label>Bilangan pertama
+          <input type="number" id="angkaA" value="9">
+        </label>
+        <label>Bilangan kedua
+          <input type="number" id="angkaB" value="4">
+        </label>
+      </div>
+      <button type="button" id="btnOperasi">Hitung Operasi</button>
+      <div id="hasilOperasi" class="result" aria-live="polite">Hasil akan tampil di sini.</div>
+    </section>
+
+    <section class="panel">
+      <h2>Latihan 4 — Seleksi Kondisi if–else</h2>
+      <label>Nilai mahasiswa (0–100)
+        <input type="number" id="nilaiIf" min="0" max="100" step="any" placeholder="Contoh: 75">
+      </label>
+      <button type="button" id="btnNilai">Periksa Kelulusan</button>
+      <p id="hasilNilai" class="result" aria-live="polite"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Latihan 5 — Seleksi Kondisi switch</h2>
+      <label>Pilih angka 1–5
+        <select id="pilihanSwitch">
+          <option value="">-- Pilih angka --</option>
+          <option value="1">1</option><option value="2">2</option>
+          <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+      </label>
+      <button type="button" id="btnSwitch">Tampilkan Nama Bilangan</button>
+      <p id="hasilSwitch" class="result" aria-live="polite"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Latihan 6 — Bilangan Genap atau Ganjil</h2>
+      <label>Masukkan bilangan bulat
+        <input type="number" id="bilangan" step="1" placeholder="Contoh: 12">
+      </label>
+      <button type="button" id="btnCekBilangan">Periksa</button>
+      <p id="hasilBilangan" class="result" aria-live="polite"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Latihan 7 — Mengubah Warna Halaman</h2>
+      <p>Pilih tombol untuk mengubah warna latar halaman.</p>
+      <div class="button-row">
+        <button type="button" data-warna="lightgreen">Latar Hijau</button>
+        <button type="button" data-warna="white" class="secondary">Latar Putih</button>
+        <button type="button" data-warna="lightyellow" class="yellow">Latar Kuning</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Latihan 8 — Checkbox Menu Makanan</h2>
+      <p>Pilih menu. Total harga akan dihitung otomatis.</p>
+      <div class="menu-list">
+        <label><input type="checkbox" class="menu" value="5000"> Ayam Goreng — Rp5.000</label>
+        <label><input type="checkbox" class="menu" value="500"> Tempe — Rp500</label>
+        <label><input type="checkbox" class="menu" value="2500"> Telur Dadar — Rp2.500</label>
+        <label><input type="checkbox" class="menu" value="3000"> Sayur Sop — Rp3.000</label>
+        <label><input type="checkbox" class="menu" value="4000"> Es Teh — Rp4.000</label>
+      </div>
+      <p class="total">Total: Rp<span id="total">0</span></p>
+    </section>
+
+    <section class="panel">
+      <h2>Mini Project — Kalkulator Nilai Mahasiswa</h2>
+      <p>Bobot nilai: Tugas 30%, UTS 30%, dan UAS 40%. Semua nilai harus berada pada rentang 0–100.</p>
+      <form id="formNilai">
+        <div class="form-grid">
+          <label>Nilai Tugas
+            <input type="number" id="tugas" min="0" max="100" step="any" required>
+          </label>
+          <label>Nilai UTS
+            <input type="number" id="uts" min="0" max="100" step="any" required>
+          </label>
+          <label>Nilai UAS
+            <input type="number" id="uas" min="0" max="100" step="any" required>
+          </label>
+        </div>
+        <button type="submit">Hitung Nilai Akhir</button>
+      </form>
+      <div id="hasilAkhir" class="result" aria-live="polite">Hasil nilai akhir akan tampil di sini.</div>
+    </section>
+
+    <section class="panel">
+      <h2>Eksperimen Mandiri</h2>
+      <h3>1. Operasi dari Prompt</h3>
+      <button type="button" id="btnPromptOperasi">Masukkan Dua Nilai</button>
+      <p class="hint">Hasil operasi juga muncul di Console.</p>
+
+      <h3>2. Tabel Perkalian 7</h3>
+      <button type="button" id="btnPerkalian">Tampilkan Tabel Perkalian 7</button>
+      <pre id="tabelPerkalian" class="result"></pre>
+
+      <h3>3. Fungsi cekGenap(angka)</h3>
+      <label>Angka untuk cekGenap
+        <input type="number" id="cekGenapInput" step="1" placeholder="Bilangan bulat">
+      </label>
+      <button type="button" id="btnCekGenap">Cek Genap</button>
+      <p id="hasilCekGenap" class="result" aria-live="polite"></p>
+
+      <h3>4. Validasi Form</h3>
+      <form id="formValidasi">
+        <label>Nama
+          <input type="text" id="namaValidasi" placeholder="Masukkan nama">
+        </label>
+        <label>Nilai (0–100)
+          <input type="number" id="nilaiValidasi" min="0" max="100" step="any" placeholder="Masukkan nilai">
+        </label>
+        <button type="submit">Validasi Data</button>
+      </form>
+      <p id="hasilValidasi" class="result" aria-live="polite"></p>
+
+      <h3>5. Sembunyikan atau Tampilkan Elemen</h3>
+      <p id="teksToggle">Ini adalah teks yang dapat disembunyikan atau ditampilkan.</p>
+      <button type="button" id="btnToggle">Sembunyikan Teks</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Lab5Web — Praktikum Pemrograman Web: JavaScript Dasar</p>
+  </footer>
+</body>
+</html>
